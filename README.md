@@ -127,11 +127,12 @@ If you liked this project, leave a ⭐ on the repo!
 git add README.md
 git commit -m "📝 Added professional README"
 git push
-## 📸 Screenshots<img width="560" alt="image" src="https://github.com/user-attachments/assets/65beb22b-418a-4485-8f91-b7e446fb244d" />
+
 
 
 ### ✅ All Tests Passing
 ![Test Results](https://via.placeholder.com/800x400.png?text=Test+Results+Screenshot)
 git add test-results.png README.md
 git commit -m "Fix: replaced corrupted test results image"
-git push
+git push<img width="560" alt="test-result" src="https://github.com/user-attachments/assets/98996564-4e59-4bff-b1cc-0432a66430fb" />
+
