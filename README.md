@@ -127,12 +127,81 @@ If you liked this project, leave a ⭐ on the repo!
 git add README.md
 git commit -m "📝 Added professional README"
 git push
+## 🚀 Keploy Session 4 Assignment
+
+### ✅ Task 1: AI-Based API Testing with CI/CD Integration
+
+This task demonstrates how I used **Keploy's AI-powered API Testing** features to improve test coverage and automate testing through a CI/CD pipeline.
+
+#### 📘 OpenAPI Schema
+- Generated using Swagger for all `task-manager-api` endpoints.
+- Schema file: [`openapi.yaml`](./openapi.yaml)
+
+#### 🧠 AI-Powered API Testing
+- Keploy AI inferred test cases from real `curl` commands and automated the creation of mocks.
+- Result: Fast, automatic generation of meaningful test cases with no manual scripting.
+
+#### ⚙️ GitHub Actions CI/CD
+- Integrated Keploy into GitHub Actions CI workflow.
+- CI/CD pipeline runs on every push to `main` branch and includes:
+  - Linting & Build
+  - Unit + Integration + API Testing
+  - Keploy CLI with AI test generation
+- CI file: [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
+
+#### ✅ Pipeline Status
+- ✅ All tests passing
+- ✅ Keploy API Tests recorded and replayed
+- ✅ OpenAPI schema validated
+- ✅ Full automation working via GitHub Actions
+
+#### 📸 Test Report Screenshot (Keploy Dashboard)
+
+![Keploy Test Report](https://github.com/user-attachments/assets/98996564-4e59-4bff-b1cc-0432a66430fb)
+
+---
+
+### ✅ Task 2: API Testing with Chrome Extension
+
+#### 🌐 Websites Tested with Keploy Chrome Extension
+1. [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)
+2. [https://reqres.in](https://reqres.in)
+
+#### 🔍 What I Did
+- Installed the Keploy Chrome Extension.
+- Opened DevTools → Keploy tab → Captured API requests in real time.
+- Successfully recorded multiple test cases while browsing the APIs.
+- Replayed tests using the extension's “Replay” feature.
+
+#### 📝 Blog Post
+
+> **Title:** From Manual to Magical: My First Experience with AI-Powered API Testing using Keploy 🚀  
+> **Published on:** [LinkedIn / Medium / Dev.to - Link here]  
+> **Link:** [https://your-blog-link.com](https://your-blog-link.com)
+
+#### 💬 Summary of Blog
+- Compared manual API test creation with Keploy’s AI-based approach.
+- Shared how AI helped reach 100% test coverage in minutes.
+- Highlighted the joy of auto-generating test cases without boilerplate.
+- Discussed how Keploy helped me focus more on building features and less on debugging.
+
+---
+
+### ✅ Submission Summary
+
+| Component                | Status    |
+|--------------------------|-----------|
+| OpenAPI Schema           | ✅ Done    |
+| AI API Testing via Keploy | ✅ Done    |
+| CI/CD Integration (GitHub Actions) | ✅ Done    |
+| Chrome Extension Testing | ✅ Done    |
+| Blog Published           | ✅ Done    |
+| Screenshot in README     | ✅ Added   |
+| GitHub Repository        | ✅ [task-manager-api](https://github.com/Dur-jaya/task-manager-api) |
+
 
 
 
 ### ✅ All Tests Passing
-![Test Results](https://via.placeholder.com/800x400.png?text=Test+Results+Screenshot)
-git add test-results.png README.md
-git commit -m "Fix: replaced corrupted test results image"
-git push<img width="560" alt="test-result" src="https://github.com/user-attachments/assets/98996564-4e59-4bff-b1cc-0432a66430fb" />
+
 
