@@ -1,40 +1,19 @@
-const Task = require('../models/taskModel');
+// controllers/taskController.js
 
-exports.getTasks = async (req, res) => {
-  try {
-    const tasks = await Task.find();
-    res.json(tasks);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
+exports.getTasks = (req, res) => {
+  res.status(200).json({ message: 'Fetched all tasks' });
 };
 
-exports.createTask = async (req, res) => {
-  const { title, completed } = req.body;
-  try {
-    const task = await Task.create({ title, completed });
-    res.status(201).json(task);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
-  }
+exports.createTask = (req, res) => {
+  res.status(201).json({ message: 'Created a new task' });
 };
 
-exports.updateTask = async (req, res) => {
-  try {
-    const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    if (!task) return res.status(404).json({ message: 'Task not found' });
-    res.json(task);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
-  }
+exports.updateTask = (req, res) => {
+  const { id } = req.params;
+  res.status(200).json({ message: `Updated task with id ${id}` });
 };
 
-exports.deleteTask = async (req, res) => {
-  try {
-    const task = await Task.findByIdAndDelete(req.params.id);
-    if (!task) return res.status(404).json({ message: 'Task not found' });
-    res.json({ message: 'Task deleted' });
-  } catch (err) {
-    res.status(400).json({ message: err.message });
-  }
+exports.deleteTask = (req, res) => {
+  const { id } = req.params;
+  res.status(200).json({ message: `Deleted task with id ${id}` });
 };

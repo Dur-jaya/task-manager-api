@@ -1,13 +1,24 @@
+const express = require('express');
 const mongoose = require('mongoose');
-const app = require('./index'); // import the app
-require('dotenv').config();
+const dotenv = require('dotenv');
+const taskRoutes = require('./routes/taskRoutes');
+const { swaggerUi, specs } = require('./swagger'); // ✅ NEW
 
-const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGO_URI;
+dotenv.config();
 
-mongoose.connect(MONGO_URI)
+const app = express();
+app.use(express.json());
+
+app.use('/api/tasks', taskRoutes);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs)); // ✅ NEW
+
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    console.log('✅ MongoDB connected');
-    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+    console.log('✅ Connected to MongoDB');
+    app.listen(process.env.PORT || 5050, () => {
+      console.log(`🚀 Server is running on port ${process.env.PORT}`);
+    });
   })
-  .catch(err => console.error('❌ MongoDB connection failed:', err));
+  .catch((err) => {
+    console.error('❌ MongoDB connection error:', err);
+  });
